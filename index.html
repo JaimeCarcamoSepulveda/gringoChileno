@@ -9,6 +9,115 @@
     <script src="./script.js"defer></script>
 </head>
 <body>
-    <p id="display">testing</p>
+    <header>
+        <nav>
+
+        </nav>
+    </header>
+    <main>
+        <section class="greet">
+            <div class="introduction">
+                <h1>Hello, Welcome to Chile</h1>
+                <p>
+                Please give us some information about yourself so we can 
+                personalize unit conversions to your specific needs
+                </p> 
+                <div class="disclosure">
+                    <h5>PLEASE NOTE</h5>
+                    <small>
+                    This information will only be stored in YOUR browser localStorage,
+                    it is not stored in anywhere else. If you are using a public computer
+                    or wish to reset entered page you can clear all localStorage browser 
+                    by clicking CLEAR button below
+                    </small>
+                </div>
+                <br>
+            </div>
+            <form action="">
+                <label for="">What is your name? </label>
+                <input type="text" id="" name=""><br>
+
+                <label for=""> are you male or female?</label>
+                <input type="text" id="" name=""><br>
+
+                <label for=""> What is your U.S. home state</label>
+                <input type="text" id="" name=""><br>
+
+                <label for="">what is your shoe size?</label>
+                <input type="text" id="" name=""><br>
+
+                <label for="">how tall are you?</label>
+                <input type="text" id="" name=""><br>
+
+                <label for="">how much do you weight?</label>
+                <input type="text" id="" name=""><br>
+
+                <label for="">what is your waist size</label>
+                <input type="text" id="" name=""><br>
+
+                <label for="">what size car are you driving in Chile?</label>
+                <input type="text" id="" name=""><br>
+
+                <label for="">What is the spend-money for your trip to Chile?</label>
+                <input type="text" id="" name=""><br>
+
+                <input type="submit" value="vamonos!">
+                <input type="submit" value="clear form">
+            </form>
+        </section>
+        <section class="personlize">
+            <h1>Hello, ${}</h1>
+            <p>
+                in ${homeState} its ${homeStateCurrentTime} 
+                you are ${hoursApart} ahead, In ${homeState} 
+                it’s ${homeStateCurrentWeather} as expected since its
+                 ${homeStateCurrentSeason}. 
+            </p>
+
+            <p>
+                if you decide to go somewhere make sure to fill up your car. 
+                For your car type it is likely to fill up at ${carType.gallons} gallons, 
+                which is ${carType.liters} in liters. Current gas prices are ${literPrice} 
+                which means you will need ${carType.liters*literPrice} in Chilean currency. 
+            </p>
+            <p>
+                Your spendable amount is ${dollars} which is ${USDToCLP} in chilean peso
+            </p>
+            <p>
+                (if men)if you go clothes shopping, your shoe size is ${menShoeSize} in EU size 
+                which is what is normally used in Chile
+                your clothing size is ${clothingSize.pants} for pants and ${clothingSize.dressShirt} for dress shirts. 
+
+                (if women)if you go clothes shopping, your shoe size is ${womenShoeSize} in EU size
+                your clothing size is ${clothingSize} for any dress 
+            </p>
+            <p>
+                There are ${holidays} this week. 
+		            if there are 0 then holidays == ‘zero’
+		            if there are 1+ return holiday name, date and country. 
+            </p>
+        </section>
+        <section class="tips">
+            <h1>In Chile...</h1>
+            <p>just like in the U.S. tips are complimentary however they are 10% rate by custom. </p>
+            <p> time does not reset after 12 (noon) it is expressed in military-time style. ex. 7pm is 19 hours. </p>
+            <p>Expect to pay 500 CLP to go to the restroom and almost ALL public restrooms. Exceptions apply 
+                if it is a restaurant in which you are eating. If you are in Santiago—or a big city — 
+                you can even expect to be handed a toilet paper amount while going in—I know this was a culture-shock to me as well. </p>
+            <p>Public transportation is actually used in Chile, so if you do travel through those means be sure to have coins handy. </p>
+            <ul>
+                <li>133 is the equivalent of 911</li>
+                <li>132 is number for  fire station</li>
+                <li>131 is phone number for ambulance</li>
+            </ul>
+            <P>You may also come across firefighters asking for money, this is because in Chile they are volunteers and receive
+                 limited funding by the state therefore they depend on money that is donated or fundraised —I know, I was shocked as well. 
+            </P>
+            <P>if you have a fever note that it will be measured in celsius not fahrenheit (refer to fahrenheit to celsius calculator)</P>
+            <P>When you greet someone they may get a kiss on the cheek. Don’t jump to conclusions this is customary although it is something 
+                that has been fading out with the younger generation.</P>
+        </section>
+    </main>
+   
 </body>
 </html>
