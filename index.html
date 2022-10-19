@@ -6,122 +6,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gringo Chilean Translator</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <script src="./script.js"defer></script>
 </head>
 <body>
-    <header>
-        <img src="" alt="">
-        <nav class="nav">
-            <ul class="nav_list">
-                <li>personalize conversion</li>
-                <li>unit conversion</li>
-                <li>Time conversion</li>
-                <li>Tips</li>
-            </ul>
-        </nav>
+    <header> 
+        <div class="navbar">
+            <img class="image" src="./images/CA2CL.svg" alt="california bear in Chile logo">
+            <nav class="nav">
+                <ul class="nav_list">
+                    <li class="nav-items"><a class="nav_links" href="">Personalize conversion</a></li>
+                    <li class="nav-items"><a class="nav_links" href="">Unit conversion</a></li>
+                    <li class="nav-items"><a class="nav_links" href="">Travel advise</a></li>
+                    <li class="nav-items"><a class="nav_links" href="">About</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main>
-        <section class="input_questions">
-            <div class="container introduction">
-                <h1>Hello, Welcome to Chile</h1>
+    <!--introduction-->
+        <section class="intro">
+            <div class="container">
+                <h1 class="introduction-text"> 
+                    <strong style="color: rgb(70, 33, 79);">
+                    Hello,
+                    </strong>
+                    <br> Welcome to Chile</h1>
                 <p>
                 Please give us some information about yourself so we can 
                 personalize unit conversions to your specific needs
                 </p> 
-                <div class="disclosure">
-                    <h5>PLEASE NOTE</h5>
-                    <small>
-                    This information will only be stored in YOUR browser localStorage,
-                    it is not stored in anywhere else. If you are using a public computer
-                    or wish to reset entered page you can clear all localStorage browser 
-                    by clicking CLEAR button below
-                    </small>
-                </div>
-                <br>
             </div>
         </section>
+
+        <!--form input questions-->
         <section class="input_questions">
             <div class="container">
-                <form action="">
-                    <label for="name">Enter your name? </label>
+
+                <form id="form-input"> 
+                    <label for="name">Enter your name?
                     <input type="text" id="name" name="name" required
-                    minlength="3" max="14" size="20"><br>
+                    minlength="3" max="14" size="20"></label>
 
-                    <label for="gender" required> are you male or female?
-                    <input type="checkbox" id="gender" name="male">
-                    <input type="checkbox" id="gender" name="female">
-                    </label><br>
+                    <label for="homeState"> What is your home state in the U.S.?
+                    <input type="text" id="homeState" name="home state"></label>
 
-                    <label for="homeState"> What is your U.S. home state</label>
-                    <input type="text" id="homeState" name="home state"><br>
+                    <label for="USShoeSize">what is your shoe size?
+                    <input type="number" min="1" max="2" id="ShoeSize" name="shoe size"></label>
 
-                    <label for="menShoeSize">what is your shoe size?</label>
-                    <input type="number" min="1" max="2" id="menShoeSize" name="shoe size"><br>
+                    <label for="height">how tall are you ?
+                    <input type="text" id="height" name=""></label>
 
-                    <label for="womenShoeSize">what is your shoe size?</label>
-                    <input type="number" min="1" max="2" id="womenShoeSize" name="shoe size"><br>
+                    <label for="weight">how much do you weight?
+                    <input type="number" min="1" max="3" id="weight" name=""></label>
 
-                    <label for="height">how tall are you?</label>
-                    <input type="text" id="height" name=""><br>
+                    <label for="Waist">what is your waist size
+                    <input type="number" min="1" max="2" id="waist" name=""></label>
 
-                    <label for="weight">how much do you weight?</label>
-                    <input type="number" min="1" max="3" id="weight" name=""><br>
 
-                    <label for="menWaist">what is your waist size</label>
-                    <input type="number" min="1" max="2" id="menWaist" name=""><br>
+                    <label for="">what size car are you driving in Chile?
+                    <input type="text" id="carType" name=""></label>
 
-                    <label for="womenWaist">what is your waist size</label>
-                    <input type="number" min="1" max="2" id="womenWaist" name=""><br>
+                    <label for="USD">spending-cash for your trip to Chile?
+                    <input type="number" min="2" max="100" id="cash" name=""></label>
 
-                    <label for="">what size car are you driving in Chile?</label>
-                    <input type="text" id="" name=""><br>
-
-                    <label for="USD">What is the spend-money for your trip to Chile?</label>
-                    <input type="number" min="2" max="100" id="USD" name=""><br>
-
-                    <input type="submit" value="vamonos!">
-                    <input type="submit" value="clear form">
+                    <label for="gender" required> for waist and shoe size, do you want male or female unit conversion?
+                        <select name="gender" id="gender" form="form-input">
+                            <option value="female">female</option>
+                            <option value="male">male</option>
+                         </select>
+                    </label> 
+                    <div>
+                    <button type="submit">vamonos!</button>
+                    <button type="reset">reset</button>
+                    </div>
                 </form>
+                
+                <div class="disclosure">
+                    <hr>
+                    <span><strong>PLEASE NOTE:</strong><span>
+                    <small>
+                    This information will only be stored in browser's localStorage,
+                    it is not stored anywhere else. If you are using a public computer you can clear all localStorage from the browser 
+                    by clicking the <strong style="color: rgb(134, 14, 38);">RESET</strong> button
+                    </small>
+                    <hr>
+                </div>
             </div>
         </section>
-        <section class="input_response">
-            <div class="container">
-                <h1>Hello, ${}</h1>
-                <p>
-                    in ${homeState} its ${homeStateCurrentTime} 
-                    you are ${hoursApart} ahead, In ${homeState} 
-                    it’s ${homeStateCurrentWeather} as expected since its
-                     ${homeStateCurrentSeason}. 
-                </p>
 
-                <p>
-                    if you decide to go somewhere make sure to fill up your car. 
-                    For your car type it is likely to fill up at ${carType.gallons} gallons, 
-                    which is ${carType.liters} in liters. Current gas prices are ${literPrice} 
-                    which means you will need ${carType.liters*literPrice} in Chilean currency. 
-                </p>
-                <p>
-                    Your spendable amount is ${dollars} which is ${USDToCLP} in chilean peso
-                </p>
-                <p>
-                    (if men)if you go clothes shopping, your shoe size is ${menShoeSize} in EU size 
-                    which is what is normally used in Chile
-                    your clothing size is ${clothingSize.pants} for pants and ${clothingSize.dressShirt} for dress shirts. 
-
-                    (if women)if you go clothes shopping, your shoe size is ${womenShoeSize} in EU size
-                    your clothing size is ${clothingSize} for any dress 
-                </p>
-                <p>
-                    There are ${holidays} this week. 
-		                if there are 0 then holidays == ‘zero’
-		                if there are 1+ return holiday name, date and country. 
-                </p>
-            </div>
+        <!--response to input-->
+        <section class="response">
+            <!--input-response inserted here-->
         </section>
-        <section class="tips">
+        <section class="travel advise">
             <div class="container">
                 <h1>In Chile...</h1>
                 <p>just like in the U.S. tips are complimentary however they are 10% rate by custom. </p>

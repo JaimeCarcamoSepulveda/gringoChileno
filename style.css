@@ -8,6 +8,7 @@
   font-family: 'Roboto', sans-serif;
 }
 
+
 /* Remove default margin */
 body,
 h1,
@@ -19,19 +20,15 @@ figure,
 blockquote,
 dl,
 dd {
-  margin: 0;
+margin: 0;
 }
 
-/* Set core root defaults */
-html:focus-within {
-  scroll-behavior: smooth;
-}
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
+  line-height: 1.3;
+  background: fixed center url("./images/patagoniabg.png") no-repeat;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -42,31 +39,77 @@ select {
   font: inherit;
 }
 
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-   scroll-behavior: auto;
-  }
-  
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+.navbar {
+  background-color: rgba(105, 97, 89, 0.303);
+  height: 14vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.nav {
-  display: flex;
-  justify-content: space-between;
+.image {
+  width: 7rem;
+  padding-left: 1.3rem;
 }
 
 .nav_list {
   list-style: none;
   display: flex;
   gap: 1rem;
-  margin-left: auto;
-  padding-right: 2rem;
+  padding-right: 1.3rem;
 }
+
+.nav_links {
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 1rem 2rem;
+
+}
+
+.introduction-text {
+  font-size: 2rem;
+  color: rgb(18, 32, 68);
+}
+
+
+form { 
+display: flex;
+flex-direction: column;
+gap: .5rem;
+  
+}
+
+
+input {
+  width: 13rem;
+}
+
+button {
+  padding: .3rem 1.5rem;
+  margin: 2rem 1rem 1rem 0;
+  border-radius: 4px;
+  min-width: 120px;
+  text-transform: uppercase;
+  background-color: rgb(157, 168, 172);
+}
+
+button:hover, button:focus {
+  opacity: .5;
+  transition: 300ms;
+}
+
+.disclosure {
+  color: white;
+  font-weight: 800;
+}
+.personalized-response {
+  color: antiquewhite;
+}
+
