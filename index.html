@@ -14,7 +14,7 @@
 <body>
     <header> 
         <div class="navbar">
-            <img class="image" src="./images/CA2CL.svg" alt="california bear in Chile logo">
+            <img class="image" src="./images/CA.svg" alt="california bear in Chile logo">
             <nav class="nav">
                 <ul class="nav_list">
                     <li class="nav-items"><a class="nav_links" href="">Personalize conversion</a></li>
@@ -47,36 +47,45 @@
                 <form id="form-input"> 
                     <label for="name">Enter your name?
                     <input type="text" id="name" name="name" required
-                    minlength="3" max="14" size="20"></label>
+                    minlength="3" max="14" size="20" placeholder="enter name"></label>
 
                     <label for="homeState"> What is your home state in the U.S.?
-                    <input type="text" id="homeState" name="home state"></label>
+                    <input type="text" id="homeState" name="home state" placeholder="ex. california"></label>
+
+                    <label for="homeCity"> What is your home state in the U.S.?
+                        <input type="text" id="homeCity" name="home city" placeholder="ex. los angeles"></label>
 
                     <label for="USShoeSize">what is your shoe size?
-                    <input type="number" min="1" max="2" id="ShoeSize" name="shoe size"></label>
+                    <input type="number" min="1" max="23" id="ShoeSize" name="shoe size" placeholder=" U.S. shoe size"></label>
 
                     <label for="height">how tall are you ?
-                    <input type="text" id="height" name=""></label>
+                    <input type="text" id="height" name="height" placeholder=" height in feet"></label>
 
                     <label for="weight">how much do you weight?
-                    <input type="number" min="1" max="3" id="weight" name=""></label>
+                    <input type="number" min="1" max="500" id="weight" name="weight" placeholder=" weight in lbs"></label>
 
                     <label for="Waist">what is your waist size
-                    <input type="number" min="1" max="2" id="waist" name=""></label>
+                    <input type="number" min="1" max="100" id="waist" name="waist" placeholder="waist size in inches"></label>
 
-
-                    <label for="">what size car are you driving in Chile?
-                    <input type="text" id="carType" name=""></label>
+                    <label for="carType">what size vehicle are you driving in Chile?</label>
+                    <select name="carType" id="carType" form="form-input">
+                        <option value="small">small vehicle (2-cylinder)</option>
+                        <option value="medium">medium-size vehicle (4 to 6-cylinder)</option>
+                        <option value="big">large vehicle (8-cylinder)</option>
+                     </select>
+                   
+                    <label for="travel-distance">Are you traveling? 
+                    <input type="number" id="travel-distance" name="travel-distance" placeholder= " enter in miles "></label>
 
                     <label for="USD">spending-cash for your trip to Chile?
-                    <input type="number" min="2" max="100" id="cash" name=""></label>
+                    <input type="number" min="2" max="200000" id="cash" name="USD" placeholder="$ USD"></label>
 
-                    <label for="gender" required> for waist and shoe size, do you want male or female unit conversion?
+                    <label for="gender" required> Do you need male or female unit conversion? </label> 
                         <select name="gender" id="gender" form="form-input">
                             <option value="female">female</option>
                             <option value="male">male</option>
                          </select>
-                    </label> 
+                   
                     <div>
                     <button type="submit">vamonos!</button>
                     <button type="reset">reset</button>
@@ -89,7 +98,7 @@
                     <small>
                     This information will only be stored in browser's localStorage,
                     it is not stored anywhere else. If you are using a public computer you can clear all localStorage from the browser 
-                    by clicking the <strong style="color: rgb(134, 14, 38);">RESET</strong> button
+                    by clicking the <strong style="color: rgb(134, 14, 38);"> RESET</strong> button
                     </small>
                     <hr>
                 </div>
@@ -97,7 +106,12 @@
         </section>
 
         <!--response to input-->
-        <section class="response">
+        <section>
+            <div class="US-flag">
+                <div id="response-container" class="container response-container">
+    
+                </div>
+             </div>
             <!--input-response inserted here-->
         </section>
         <section class="travel advise">

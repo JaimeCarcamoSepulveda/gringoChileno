@@ -6,6 +6,7 @@
 }
 :root {
   font-family: 'Roboto', sans-serif;
+
 }
 
 
@@ -105,11 +106,36 @@ button:hover, button:focus {
   transition: 300ms;
 }
 
+
+
+
 .disclosure {
   color: white;
   font-weight: 800;
 }
-.personalized-response {
-  color: antiquewhite;
+
+.US-flag {
+  background: url(./images/flag.png) no-repeat;
+  background-size: cover;
+  width: 95%;
+  margin: 0 auto;
 }
+
+.response-container {
+  color: antiquewhite;
+  min-height: 100vh;
+  background-color: rgba(28, 25, 25, 0.265);
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin: auto;
+  gap: .5rem;
+}
+
+
+
+
+
+
 
