@@ -7,79 +7,86 @@
     <title>Gringo Chilean Translator</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/9555460ca5.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="./script.js"defer></script>
 </head>
 <body>
-    <header> 
-        <div class="navbar">
-            <img class="image" src="./images/CA.svg" alt="california bear in Chile logo">
-            <nav class="nav">
-                <ul class="nav_list">
-                    <li class="nav-items"><a class="nav_links" href="">Personalize conversion</a></li>
-                    <li class="nav-items"><a class="nav_links" href="">Unit conversion</a></li>
-                    <li class="nav-items"><a class="nav_links" href="">Travel advise</a></li>
-                    <li class="nav-items"><a class="nav_links" href="">About</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <nav class="navbar"> 
+        
+            <img class="california-bear-logo" src="./images/CA.svg" alt="california bear in Chile logo">
+
+                <a href="#" class="ham-button">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </a>
+            
+                <div class="nav_list">
+                    <ul>
+                        <li class="nav-items"><a class="nav_links" href="#form-container">Personalize conversion</a></li>
+                        <li class="nav-items"><a class="nav_links" href="#unit-conversions">Unit conversions</a></li>
+                        <li class="nav-items"><a class="nav_links" href="#travel-advise">Travel advise</a></li>
+                        <li class="nav-items"><a class="nav_links" href="about.html">About</a></li>
+                    </ul>
+                </div>
+            
+        
+        </nav>
     <!--introduction-->
-        <section class="intro">
-            <div class="container">
-                <h1 class="introduction-text"> 
-                    <strong style="color: rgb(70, 33, 79);">
-                    Hello,
-                    </strong>
-                    <br> Welcome to Chile</h1>
+        <section class="container">
+            <div class="introduction">
+                <h1 id="hello"> 
+                <strong>Hello,</strong></h1>
+                <h1 id="welcome"> Welcome to <span>Chile</span></h1>
                 <p>
-                Please give us some information about yourself so we can 
-                personalize unit conversions to your specific needs
+                Let's get started. Tells us about yourself and get personalize unit conversions.
                 </p> 
             </div>
         </section>
 
         <!--form input questions-->
         <section class="input_questions">
-            <div class="container">
+            <div id="form-container" class="container">
 
-                <form id="form-input"> 
-                    <label for="name">Enter your name?
+                <form autocomplete="off" id="form-input"> 
+                    <label for="name">Your name
                     <input type="text" id="name" name="name" required
                     minlength="3" max="14" size="20" placeholder="enter name"></label>
 
-                    <label for="homeState"> What is your home state in the U.S.?
-                    <input type="text" id="homeState" name="home state" placeholder="ex. california"></label>
+                    <label for="USD">spending-cash for your trip to Chile
+                    <input type="number" id="cash" name="USD" placeholder="ex. $100,000"></label>
 
-                    <label for="homeCity"> What is your home state in the U.S.?
-                        <input type="text" id="homeCity" name="home city" placeholder="ex. los angeles"></label>
+                    <label for="homeState"> Your home state in the U.S.
+                    <input type="text" id="homeState" name="home state" placeholder="ex. California"></label>
+
+                    <label for="homeCity"> What city do you live in?
+                        <input type="text" id="homeCity" name="home city" placeholder="ex. Los Angeles"></label>
+
 
                     <label for="USShoeSize">what is your shoe size?
                     <input type="number" min="1" max="23" id="ShoeSize" name="shoe size" placeholder=" U.S. shoe size"></label>
 
-                    <label for="height">how tall are you ?
+                    <label for="height">how tall are you?
                     <input type="text" id="height" name="height" placeholder=" height in feet"></label>
 
                     <label for="weight">how much do you weight?
-                    <input type="number" min="1" max="500" id="weight" name="weight" placeholder=" weight in lbs"></label>
+                    <input type="number" id="weight" name="weight" placeholder=" weight in lbs"></label>
 
-                    <label for="Waist">what is your waist size
+                    <label for="Waist">what is your waist size?
                     <input type="number" min="1" max="100" id="waist" name="waist" placeholder="waist size in inches"></label>
 
-                    <label for="carType">what size vehicle are you driving in Chile?</label>
-                    <select name="carType" id="carType" form="form-input">
-                        <option value="small">small vehicle (2-cylinder)</option>
-                        <option value="medium">medium-size vehicle (4 to 6-cylinder)</option>
-                        <option value="big">large vehicle (8-cylinder)</option>
-                     </select>
+                    <label for="travel-distance">How far are you traveling in car? 
+                    <input type="number" id="travel-distance" name="travel-distance" placeholder= " in miles "></label>
+
+                    <label for="carType">what size vehicle are you driving?</label>
+                        <select name="carType" id="carType" form="form-input">
+                            <option value="small">small vehicle (2-cylinder)</option>
+                            <option value="medium">medium-size vehicle (4 to 6-cylinder)</option>
+                            <option value="big">large vehicle (8-cylinder)</option>
+                         </select>
                    
-                    <label for="travel-distance">Are you traveling? 
-                    <input type="number" id="travel-distance" name="travel-distance" placeholder= " enter in miles "></label>
-
-                    <label for="USD">spending-cash for your trip to Chile?
-                    <input type="number" min="2" max="200000" id="cash" name="USD" placeholder="$ USD"></label>
-
                     <label for="gender" required> Do you need male or female unit conversion? </label> 
                         <select name="gender" id="gender" form="form-input">
                             <option value="female">female</option>
@@ -91,55 +98,392 @@
                     <button type="reset">reset</button>
                     </div>
                 </form>
-                
-                <div class="disclosure">
-                    <hr>
-                    <span><strong>PLEASE NOTE:</strong><span>
-                    <small>
-                    This information will only be stored in browser's localStorage,
-                    it is not stored anywhere else. If you are using a public computer you can clear all localStorage from the browser 
-                    by clicking the <strong style="color: rgb(134, 14, 38);"> RESET</strong> button
-                    </small>
-                    <hr>
+                <div class="map-container">
+                    <img src="./images/chileMap.png" alt="">
                 </div>
+                
             </div>
         </section>
+            <div class="disclosure">
+                <hr>
+                <span><strong>PLEASE NOTE:</strong><span>
+                <small>
+                This information will only be stored in browser's localStorage,
+                it is not stored anywhere else. If you are using a public computer you can clear all localStorage from the browser 
+                by clicking the <strong> RESET</strong> button
+                </small>
+                <hr>
+            </div>
 
         <!--response to input-->
-        <section>
-            <div class="US-flag">
+        <section class="response" style="display:none;">
                 <div id="response-container" class="container response-container">
-    
+                <div class="custom-response">
+                    
                 </div>
+                
+    
+                
              </div>
             <!--input-response inserted here-->
         </section>
-        <section class="travel advise">
-            <div class="container">
-                <h1>In Chile...</h1>
-                <p>just like in the U.S. tips are complimentary however they are 10% rate by custom. </p>
-                <p> time does not reset after 12 (noon) it is expressed in military-time style. ex. 7pm is 19 hours. </p>
-                <p>Expect to pay 500 CLP to go to the restroom and almost ALL public restrooms. Exceptions apply 
-                    if it is a restaurant in which you are eating. If you are in Santiago—or a big city — 
-                    you can even expect to be handed a toilet paper amount while going in—I know this was a culture-shock to me as well. </p>
-                <p>Public transportation is actually used in Chile, so if you do travel through those means be sure to have coins handy. </p>
-                <ul>
-                    <li>133 is the equivalent of 911</li>
-                    <li>132 is number for  fire station</li>
-                    <li>131 is phone number for ambulance</li>
-                </ul>
-                <P>You may also come across firefighters asking for money, this is because in Chile they are volunteers and receive
-                     limited funding by the state therefore they depend on money that is donated or fundraised —I know, I was shocked as well. 
-                </P>
-                <P>if you have a fever note that it will be measured in celsius not fahrenheit (refer to fahrenheit to celsius calculator)</P>
-                <P>When you greet someone they may get a kiss on the cheek. Don’t jump to conclusions this is customary although it is something 
-                    that has been fading out with the younger generation.</P>
+        <section id="unit-conversions" class="conversion-functions"><h2>UNIT CONVERSIONS</h2>
+            <div id="weightDiv">
+                <h3>WEIGHT</h3>
+                <p>Enter weight in pounds or kilos. one pound equals 0.4535 Kilos. One kilo equals 2.204 pounds</p>
+                <label for="weight"><input type="number" id="weightLbs" name="weight" placeholder=" weight in lbs"></label> OR
+                <label for="weight"><input type="number" id="weightKgs" name="weight" placeholder=" weight in kgs"></label>
+                <div></div>
             </div>
+
+            <div id="heightDiv">
+                <h3>HEIGHT</h3>
+                <p>Enter height in feet or meters. One foot equals 0.3048 meter. One meter equals 3.28 feet. </p>
+                <label for="height"><input type="number" id="heightFt" name="height" placeholder=" height in feet"></label> OR
+                <label for="height"><input type="number" id="heightM" name="height" placeholder=" height in meters"></label>
+                <div></div>
+            </div>
+
+            <div id="temperatureDiv">
+                <H3>TEMPERATURE</H3>
+                <p>Enter fahrenheit or celsius. Fahrenheit is used in United States, Liberia and The Cayman Islands. Celsius is standard everywhere else.</p>
+                <label for="fahrenheit"><input type="number" id="fahrenheit" name="fahrenheit" placeholder="temperature in fahrenheit"></label> OR
+                <label for="celsius"><input type="number" id="celsius" name="celsius" placeholder="temperature in celsius"></label>
+                <div></div>
+            </div>
+            <div id="gasDiv">
+                <H3>GAS</H3>
+                <p>Enter liters or gallons. One gallons equals 3.785 liters. One liter equals 0.2641 gallons.</p>
+                <label for="gallons"><input type="number" id="gallons" name="gallons" placeholder="enter gallons"></label> OR
+                <label for="liters"><input type="number" id="liters" name="liters" placeholder=" enter liters"></label>
+                <div></div>
+            </div>
+            <div id="menShoeSizeDiv">
+                <H3>MEN SHOE SIZE</H3>
+                <p>Enter U.S. shoes size or EU Shoe size. Chile along with most Europe uses EU shoe size measurement</p>
+                <label for="USMenShoeSize"><input type="number" min="1" max="23" id="USMenShoeSize" name="USMenShoeSize" placeholder=" U.S. Men shoe size"></label> OR    
+                <label for="EUMenShoeSize"><input type="number" min="1" max="23" id="EUMenShoeSize" name="EUMenShoeSize" placeholder="Chile Men shoe size Chile"></label>
+                <div></div>
+            </div>
+            <div id="womenShoeSizeDiv">
+                <H3>WOMEN SHOE SIZE</H3>
+                <p>Enter Women U.S. shoes size or Women EU Shoe size. Chile along with most of Europe uses EU shoe size measurement</p>
+                <label for="USWomenShoeSize"><input type="number" min="1" max="23" id="USWomenShoeSize" name="USWomenShoeSize" placeholder=" U.S. Women shoe size "></label> OR
+                <label for="EUWomenShoeSize"><input type="number" min="1" max="23" id="EUWomenShoeSize" name="EUWomenShoeSize" placeholder="Chile Women shoe size"></label>
+                <div></div>
+            </div>
+            <div id="theirWaistSizeDiv">
+                <H3>WAIST SIZE</H3>
+                <p>Waist size for Men between (30-50 US) or (40-60 EU)</p>
+                <label for="USWaist"><input type="number" id="USWaist" name="USWaist" placeholder="U.S. Waist size "></label> OR
+                <label for="EUWaist"><input type="number" id="EUWaist" name="EUWaist" placeholder="EU Waist size"></label>
+                <div></div>            
+            </div>
+    
+            <div id="measuredSizeDiv">
+                <H3>MEASURE SIZE</H3>
+                <p>Convert inches to centimeters or vice versa</p>
+                <label for="USMeasure"><input type="number" id="USMeasure" name="USMeasure" placeholder="measurement in inches"></label> OR
+                <label for="EUMeasure"><input type="number" id="EUMeasure" name="EUMeasure" placeholder="measurement in centimeters"></label>
+                <div></div>            
+            </div>
+        
+            <div id="distanceDiv">
+                <H3>DISTANCE</H3>
+                <p>Enter miles or kilometers. One mile is equal to 1.609 Kilometers. One Kilometer is equal to 0.6213 miles.</p>
+                <label for="miles"><input type="number" id="miles" name="miles" placeholder="enter miles"></label> OR
+                <label for="kilometers"><input type="number" id="kilometers" name="kilometers" placeholder="enter kilometers"></label>
+                <div></div>
+            </div>
+            <div id="seasonDiv">
+                <H3>SEASON</H3>
+                <p>Enter month and day to get respective season in Chile or United States.</p>
+                <label for="seasonUS"><input type="number" min="1" max="10" id="seasonUS" name="seasonUS" placeholder="enter MM/DD in the U.S."></label> OR
+                <label for="seasonChile"><input type="number" min="0101" max="1231" id="seasonChile" name="seasonChile" placeholder="enter MM/DD in the Chile"></label>
+                <div></div>
+            </div>
+
+        </section>
+        <section id="travel-advise">
+            <div>
+                <h1>Travel Advise</h1>
+                <p class="intro"> 
+                As a U.S. citizen living abroad in Chile some cultural enigmas have proven to be difficult to decipher, 
+                others incomprehensible. Overall, I have come to understand and love most of Chilean culture.
+                As an American at heart, I confess there are things I will never fully understand. Here are some of my travel advises and tips. 
+                So, if you are coming to live here or are coming visit for more than five weeks hear me out…
+                </p>
+                
+            </div>
+        <!-- ADVISE SECTION OF PAGE With ACCORDION -->
+
+            <div class="advise">
+                <div>
+                
+                
+                <label for="quality-control">Quality Control <span id="down-arrow"><i class="fa-solid fa-angle-down"></i> </span></label>
+                <input type="radio" name="accordion" id="quality-control" checked>
+                    <div class="content">
+                        <p>
+                            Have you ever bought something at a store and realized you didn’t want that product?  or maybe you realized that product came defected.
+                            Most Americans are used to returning the product and having no issues getting their full-refund or exchange. You simply return it and that’s it.
+                            No hassle. No questions asked --that even sounds like the resonating motto of your typical U.S. store, don't it? <br>
+                            In Chile, things are different. The word "quality control" seems to be non-existent here. <br>
+                            I’ve bought a house full of things here. A brand-new refrigerator, futon, a stove etc. Some with missing parts or broken. These were Brand new and at big franchise stores like: ABCDIN, FALLABELLA or HOME CENTER. 
+                            Now I am not saying avoid these stores. What I am saying is if you buy something here ANYWHERE <em>ask about the warranty, check the product and save the receipt</em>
+                            because you may have to fight over your god-given right to a full-refund. Honestly, the service in Chile is …not good. Don’t take it personal. It is not your fault. 
+                            As Americans maybe we are just spoiled and this is the norm everywhere else. I couldn't tell you for sure but I do know Chileans deal with this on a regular basis. Some are even used to it and will tell you, “you didn’t save the receipt” or “it’s Chile what did you expect”. 
+                            In short, the culture is different here when it comes to commerce. Be prepared.  
+                        </p>
+                    </div>
+                </div>
+                <div>
+                
+
+                <label for="price-first">Ask what the price is first <span id="down-arrow"><i class="fa-solid fa-angle-down"></i> </span></label>
+                <input type="radio" name="accordion" id="price-first" checked>
+                    <div class="content">
+                        <p>
+                            <em> Most tourist are overcharged </em>simply because locals assume you have no idea of price and will not know the value of things. 
+                            Keep yourself informed. <em>Before buying something, know the value </em> and ask for it even if you know what the price should be. 
+                            This can save you a lot of money and headaches. Don’t worry about sounding cheap or paranoid. Most Chileans will ask for the price. 
+                            Even if its a restaurant or mini-market and you think how could they overcharged me?? Ask anyway.
+                            On that note, <em> always count your change </em>you may notice people make mistakes on your change and you may also notice it is never in your favor but always "an accident". 
+                            I've had ladies my mom's age try to rip me off with their fake, dumbfounded face of "oops". I've had kids my oldest sons age (15) try to rip me off.
+                            In short, think of your change like a box of chocolate. <br>
+                            " You never know what you're gonna get" <br>
+                            so count it! 
+                        </p>
+                    </div>
+                </div>
+                <div>
+                
+                <label for="high-school">High School is different <span id="down-arrow"><i class="fa-solid fa-angle-down"></i> </span></label>
+                <input type="radio" name="accordion" id="high-school" checked>
+                    <div class="content">    
+                        <p>
+                             High school is a unique experience that make some reminisce while others cringe. Regardless of your experience, they are profound years that contain unforgettable moments.
+                            In that sense, Chilean High school is very much the same as in the states yet there are some peculiar differences.
+                            For one,<em> most schools require uniform</em> contrary to the U.S. here uniform is the rule not the exception. <br>
+                            Another subtle difference is <em>teachers move classes after each period not students</em>. This means when the bell rings the students stay put and the teachers move class. Basically, you are classmates with the same 20+ students all year long.
+                        </p> <br>
+                    </div>
+
+                </div>
+
+                <div class="high-school-enumerated">
+                <label for="high-school-enumerated">High School years <span id="down-arrow"><i class="fa-solid fa-angle-down"></i> </span></label>
+                <input type="radio" name="accordion" id="high-school-enumerated" checked>
+                    <div class="content">    
+                        <ul>
+                            <li>9th grade is called, <em>"primero-medio"</em></li>
+                            <li>10th: <em>”segundo-medio”</em>, </li>
+                            <li>11th: <em>“tercero-medio”</em></li>
+                            <li>12th grade is <em>“cuarto-medio”</em></li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                
+
+                <label for="complimentary-tips">10% complimentary Tips<span id="down-arrow"><i class="fa-solid fa-angle-down"></i> </span></label>
+                <input type="radio" name="accordion" id="complimentary-tips" checked>
+                    <div class="content">    
+                        <p>
+                            Tips are easily calculated here, they are <em> 10% of the overall bill and are complimentary</em>. 
+                            It is customary for the waiter/waitress to ask when retrieving your card or cash if you would like to include the tip.
+                            Tips are always complimentary and never required.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                
+
+                <label for="political-history">Political history: The Coup<span id="down-arrow"><i class="fa-solid fa-angle-down"></i> </span></label>
+                <input type="radio" name="accordion" id="political-history" checked>
+                    <div class="content">    
+                        <p>
+                            Chile has an immense amount of culture. Its land is rich, its language is constantly growing, and its history is <strong>intense</strong>.
+                            Make the time to <em>look up its history</em> and you will come to better understand its customs; its political, ethical dissonance and finally its collective consciousness. <br>
+                            One event that has single-handedly affected and divided this country is the Coup d'etat which occurred in the early 70s. 
+                            I will abstain from going into detail mostly because I like to follow the advise I give. Yet I will mention the following, <br>
+                            <em>avoid talking politics</em>. <br>
+                            In this country, <em>political views can be polarizing</em>. There are strong roots and beliefs buried behind them. As a tourist or even as a gringo living in Chile. 
+                            We cannot compare our political views or notions to that of this country. They are not in the same plain. Read about it and you will understand why. 
+                        </p>
+                    </div>
+                </div>
+                <div>
+                
+
+                <label for="military-time">Military-time<span id="down-arrow"><i class="fa-solid fa-angle-down"></i> </span></label>
+                <input type="radio" name="accordion" id="military-time" checked>
+                    <div class="content">        
+                        <p>
+                            Sometimes I find myself so used to this culture that I overlook differences that would've otherwise caught my eye in the past. One thing that never seizes to grab my attention is the police uniform.
+                            It looks so 1940s German. They have long trench coats reminiscent of WWII. They use green instead of Blue and white as they do in the States. I could almost confuse the police with the military. <br>
+                             Anyway, I digress.
+                             Kinda. <br>
+                            Time in Chile is expressed in military-time with <em>the 24-hour clock</em> meaning it does not reset after 12 (noon) it goes up to 24. For instance if it is 5pm in Chile they will say it’s “diecisiete horas” or its 17-hours.
+                            This can be confusing if your spanish is not great and are expecting someone to say, "ocho" or "nueve" and instead get "vientiuna con quince"
+                        </p>
+                    </div>
+                </div>
+                <div>
+                
+                
+                <label for="carry-coins">Carry some coins. Always<span id="down-arrow"><i class="fa-solid fa-angle-down"></i> </span></label>
+                <input type="radio" name="accordion" id="carry-coins" checked>
+                    <div class="content">        
+                        <p>
+                            <strong>Why?</strong> <br>
+                            If nature calls while you are out, you will need change to use a public restroom. Unless you are at a restaurant and are eating there, <em>expect to pay to use a public restroom </em> the cost can be around 500 CLP or so. 
+                            Sometimes, carrying a bill of 10.000 pesos Chilenos or more can delay your entry to the restroom or flat out send you elsewhere looking for change. Some public facilities don't always carry change in Chile.
+                            Also, *cough* if you ARE paying to use a public restroom and are going number 2, be sure to ask for toilet paper <strong> immediately after paying before going in</strong>. As embarrassing and peculiar as it sounds they usually distribute a certain amount of toilet paper per customer. 
+                        </p>
+                    </div>
+                </div>    
+                <div>
+                
+
+                <label for="public-transportation">Public transportation<span id="down-arrow"><i class="fa-solid fa-angle-down"></i> </span></label>
+                <input type="radio" name="accordion" id="public-transportation" checked>
+                    <div class="content">        
+                        <p>
+                            Let's be honest most Americans have cars and unless you are in New York or San Francisco you are likely not used to public transportation. Rather you're better acquainted with traffic and long drives. 
+                            Public transportation is used by most Chileans, regardless of socio-economic class, if you are in a highly populated city you will use public transportation. Santiago is a perfect example. 
+                            Therefore, if you do travel through those means be sure to <em>have coins handy for the "Micro"</em> or if you take the metro <em>get a metro card and always carry it</em>. 
+                            One more thing, the metro can get crowded. I mean really crowded. This is normal part of public transportation as well. 
+                        </p>
+                    </div>
+                </div>
+                <div>
+                
+
+                <label for="firefighters">Firefighters<span id="down-arrow"><i class="fa-solid fa-angle-down"></i> </span></label>
+                <input type="radio" name="accordion" id="firefighters" checked>
+                    <div class="content">        
+                        <p>
+                            Firefighters asking for money may look like a scam but it’s not. <br>
+                            In Chile <em>Firefighters are volunteers and receive limited funding by the state</em> therefore they depend on money that is donated or fund-raised. 
+                            If you are like me, you will never truly understand how this is possible and will have a hard time accepting. Till this day every time I see a firemen asking for money I nod in disbelief. 
+                        </p>
+                    </div>
+                </div>
+                <div>
+                
+
+                <label for="metric-system">The Metric System<span id="down-arrow"><i class="fa-solid fa-angle-down"></i> </span></label>
+                <input type="radio" name="accordion" id="metric-system" checked>
+                    <div class="content">      
+                        <p>
+                            As you probably know, temperature is measured in celsius not Fahrenheit, this means if you have a fever or want to know the weather you will need to convert amount to Fahrenheit. For such conversion refer to our <a href="#temperatureDiv">Fahrenheit-to-Celsius converter</a>   
+                        </p>
+                    </div>
+                </div>
+                <div>
+                
+
+                <label for="kiss-custom">Kiss on the cheek<span id="down-arrow"><i class="fa-solid fa-angle-down"></i> </span></label>
+                <input type="radio" name="accordion" id="kiss-custom" checked>
+                    <div class="content">      
+                        <p>
+                            Greeting someone with a <em>kiss on the cheek is normal</em> although it is a custom that is fading out among the younger crowd. 
+                            Don’t jump to conclusions, a kiss on the cheek is customary. French kisses aren’t (although I heard in Russia they are) neither are two kisses one on each cheek (that is in Spain! not Chile). 
+                            Play it save. Do the ambiguous, hug-turned-into-kiss motion. If the person is going to greet you with a kiss on the cheek you will not be rude and if they don't they will get a hug instead. 
+                            You'll seem courteous either way. It's a win win!  
+                        </p>
+                    </div>
+                </div>
+
+                <div>
+                
+
+                <label for="chili-chile">Not Chili in Chile<span id="down-arrow"><i class="fa-solid fa-angle-down"></i> </span></label>
+                <input type="radio" name="accordion" id="chili-chile" checked>
+                    <div class="content">      
+                        <p>
+                            Spicy food in Chile, is not very popular, at least not as much as in Mexico. If you ask me it's not nearly as spicy. I would know. I grew up in California.
+                           <em>if you want Chili ask for "aji"</em> or <em>"Merquen"</em> there are variations of aji. 
+                            For instance, you might be offered <em>"aji cacho de cabra"</em> this is a red, smoked Chili. It's a traditional variation in the southern region of Chile. It is my favorite Chili. 
+                            If Chili is your thang!...and you happen to visit the south of Chile--which I highly recommend cause it's the best Chile has to offer-- then definitely ask for it. 
+                        </p>
+                    </div>
+                </div>
+                <div>
+                
+
+                <label for="fanny-pack">Bring a Fanny pack<span id="down-arrow"><i class="fa-solid fa-angle-down"></i> </span></label>
+                <input type="radio" name="accordion" id="fanny-pack" checked>
+                    <div class="content">      
+                         <p>
+                             Being the son of a tour guide in Los Angeles I remember enumerable times going with my Dad to Disney and seeing all the tourist with their fanny packs. 
+                             I thought they looked so ridiculous. In Chile, everyone and their mom carry fanny packs. And you should too. It can prevent you from being robbed. 
+                             pick-pocketing is somewhat of a trade here. I kid you not. 
+                             I’ve had friends and family members who have lived their whole life here tell stories of getting home and having their wallet or cell phone missing not even knowing when or where it was stolen.
+                             <em> Fanny packs are hard to steal that is why you should always carry one</em>.
+                         </p>
+                    </div>
+                </div>
+                <div>
+                
+
+                <label for="american-tourist">The American Tourist<span id="down-arrow"><i class="fa-solid fa-angle-down"></i> </span></label>
+                <input type="radio" name="accordion" id="american-tourist" checked>
+                    <div class="content">      
+                        <p>
+                            In the last decade or so, there has been a mass exodus of Haitian and South American immigrants into Chile. Some Chileans are in favor of it, others not so much.
+                            As an American tourist visiting or looking to live in Chile, I would say the odds are in your favor. Most Chileans like our culture. 
+                            they admire our country and think highly of us but it's not all roses. <br>
+                            We also have a stereotype of being a little square and up-tight. 
+                            Basically, they don't think we can't dance, they think we are always nice and not to cunning. Don't fret and prove them otherwise!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="case-emergency">
+                <label for="case-emergency">Numbers to call In case of emergency<span id="down-arrow"><i class="fa-solid fa-angle-down"></i> </span></label>
+                <input type="radio" name="accordion" id="case-emergency" checked>
+                    <div class="content">      
+                        <ul>  
+                            <li> 133 is the equivalent of 911</li>
+                            <li>132 is number for  fire station</li>
+                            <li>131 is phone number for ambulance </li>
+                        </ul>
+                    </div>
+                </div>
+              
+            </div>
+            
         </section>
     </main>
-    <footer>
+  <!--Footer-->
+  <footer class="footer">
+        <a href="mailto:jaimz.dev@gmail.com" class="footer__link">jaimz.dev@gmail.com</a>
+        <ul class="social-list">
 
-    </footer>
+            <li class="social-list__item">
+                <a href="https://www.linkedin.com/in/jaimecarcamobroker" class="social-list__link">
+                     <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </li>
+            <li class="social-list__item">
+                <a href="https://github.com/JaimeCarcamoSepulveda" class="social-list__link">
+                    <i class="fa-brands fa-square-github"></i>
+                </a>
+            </li>
+            <li class="social-list__item">
+                <a href="https://www.instagram.com/jaimecarcamobroker/" class="social-list__link">
+                    <i class="fa-brands fa-square-instagram"></i>
+                </a>
+            </li>
+            <li class="social-list__item">
+                <a href="https://www.facebook.com/jaimecarcamobroker/" class="social-list__link">
+                    <i class="fa-brands fa-square-facebook"></i>
+                </a>
+            </li>
+        </ul>
+    </footer> 
    
 </body>
 </html>
