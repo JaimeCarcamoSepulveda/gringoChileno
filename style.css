@@ -194,7 +194,7 @@ label {
 
 input {
   min-width: fit-content;
-  width: 400px;
+  width: 80vw;
   max-width: 22rem;
   height: 2rem;
   display: block;
