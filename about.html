@@ -102,6 +102,13 @@
             </li>
         </ul>
     </footer> 
-   
+   <script>
+    //Toggles hamburger Menu 
+const hamButton = document.getElementsByClassName("ham-button")[0]
+const navList = document.getElementsByClassName("nav_list")[0]
+hamButton.addEventListener("click", ()=> {
+    navList.classList.toggle("display");
+})
+   </script>
 </body>
 </html>
