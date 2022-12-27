@@ -88,7 +88,7 @@ function response(e) {
     responseSectionVisible.setAttribute("style", "display: visible");
     getCoordinates(URLCoords);
     getUSTime(homeState);
-    getCLTime();
+    //getCLTime(); <--is called after getUSTime async function is done
     if(gender === "female") {
         return getConvertedUnitsWomen(formInput);
     }else{
@@ -218,6 +218,7 @@ let seasonUSA = getSeason('', dateUSA); // declare seasonUSA outside to append i
 let timeContent = document.createElement(`p`);
 timeContent.innerHTML = `In ${country}, ${state}, it is ${timeUSA}, and the date is ${USStateDate}. <br>${seasonUSA}.`;
 timeSeasonUSADiv.append(timeUSAH3, timeContent); //created in line 39
+getCLTime(); //called after timeUSA is declared
 }
 
 //----------------API REQUESTING TIME AND DATE BASED ON CHILE TIME---------------------------
@@ -231,7 +232,6 @@ let seasonChile = getSeason(dateCHILE,'')
 let timeUSASubtract = timeUSA.split(':').slice(0,1);
 let timeChileSubtract = timeChile.split(':').slice(0,1);
 let timeDifferenceIs = parseInt(timeChileSubtract - timeUSASubtract)
-
 let timeChileH3 = document.createElement(`h3`);
 timeChileH3.innerHTML = `Time and Season in Chile`;
 let CLTimeContent = document.createElement(`p`);
@@ -247,7 +247,6 @@ timeDifferenceDiv.append(timeDifferenceH3, timeDifference); //created in line 40
 let outroSpan = document.createElement('span');
 outroSpan.innerHTML = `Be sure to read our travel advise section below. Save travels and enjoy your trip!` //add link to section of non personalized functions
 outroDiv.appendChild(outroSpan); // created in line 41
-
 }
 
 //---------------------------INDIVIDUAL FUNCTIONS BELOW------------------------------------------------------------------------------------------------------------------
