@@ -1,4 +1,5 @@
 window.addEventListener("load", displayIntro);
+import { apiKey1, apiKey2, apiKey3 } from './apiKeys';
 
 function displayIntro () {
     setTimeout ( ()=>{
@@ -47,9 +48,9 @@ let homeState = " ";
 let USDXCLP = {};
 let timeUSA = '';
 let timeChile = '';
-let locationAPIkey = '87777ca4cdeac88a2810d012d3dff954';//API KEY FOR OPEN WEATHER MAP 
+let locationAPIkey = apiKey1;//API KEY FOR OPEN WEATHER MAP 
 let dateTimeCurrentLocation = new Date();
-console.log(`current location time is ${dateTimeCurrentLocation}`);
+//console.log(`current location time is ${dateTimeCurrentLocation}`);
 
 //--------------------structure of response -----------------------------------------------------------------------------------
 const responseContainer = document.querySelector("#response-container"); //all responses inserted into this container
@@ -181,7 +182,7 @@ currencyDiv.append( currencyH3, currencyContent); //created in line 37
 
 //----------------API FOR GETTING LATITUDE AND LONGITUDE LOCATION FROM CITY AND STATE IN US----------------------------------------------
 let timeZoneURL = '';
-let  timeZoneAPIKey = `9394eccb334f4a4ebcd46d9addf77f6a`
+let  timeZoneAPIKey = apiKey2;
 
 const getCoordinates = async (URLCoords) => {
    const response = await fetch(URLCoords);
@@ -202,7 +203,7 @@ async function getTimeZone(timeZoneURL) {
 
 
 //----------------API REQUESTING TIME AND DATE BASED ON GIVEN LOCATION OF US HOME STATE---------------------------
-const geoAPIKey = 'e000b03e24be4f11b13bba28df8da6fc'; //API KEY FOR IPGEOLOCATION  gets region time and date
+const geoAPIKey = apiKey3; //API KEY FOR IPGEOLOCATION  gets region time and date
 
 async function getUSTime(homeState) {
 let yourHomeState = homeState.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ').replace(/\s/g, "%20");
