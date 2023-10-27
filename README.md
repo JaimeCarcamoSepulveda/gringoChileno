@@ -1,7 +1,9 @@
 # gringoChileno
-A much needed translator for a U.S. citizen living in Chile
+A translator for a U.S. National living or visiting Chile
 
-includes conversion of:
+Written in HTML,CSS, and JS this website's focus is on translating metrics, measurements, weather, and even currency for a U.S. national to is visiting Chile. It enables you to graps and calculate dollar cost in Chilean pesos, weather from Celcius to farenheit, clothes size, shoe size, gallons to liters, and more.
+
+conversions include:
 
 -feet to meters
 -miles to kilometers
